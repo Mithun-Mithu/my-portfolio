@@ -1,0 +1,117 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 225 64% 6%;
+    --foreground: 210 40% 98%;
+    --card: 224 53% 9%;
+    --card-foreground: 210 40% 98%;
+    --popover: 224 53% 9%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 199 89% 68%;
+    --primary-foreground: 224 71% 8%;
+    --secondary: 222 32% 16%;
+    --secondary-foreground: 210 40% 96%;
+    --muted: 223 24% 18%;
+    --muted-foreground: 215 20% 72%;
+    --accent: 221 39% 18%;
+    --accent-foreground: 210 40% 98%;
+    --border: 220 31% 20%;
+    --input: 220 31% 20%;
+    --ring: 199 89% 68%;
+  }
+
+  html.light {
+    --background: 210 40% 98%;
+    --foreground: 224 71% 8%;
+    --card: 0 0% 100%;
+    --card-foreground: 224 71% 8%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 224 71% 8%;
+    --primary: 199 84% 42%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 210 40% 96%;
+    --secondary-foreground: 224 71% 12%;
+    --muted: 210 40% 96%;
+    --muted-foreground: 220 16% 40%;
+    --accent: 200 60% 94%;
+    --accent-foreground: 224 71% 12%;
+    --border: 214 31% 87%;
+    --input: 214 31% 87%;
+    --ring: 199 84% 42%;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: var(--font-body), sans-serif;
+    min-height: 100vh;
+    background-image:
+      radial-gradient(circle at top, rgba(56, 189, 248, 0.12), transparent 32%),
+      linear-gradient(180deg, rgba(15, 23, 42, 0.82), rgba(15, 23, 42, 0.95));
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-display), sans-serif;
+  }
+
+  code,
+  pre,
+  .font-mono {
+    font-family: var(--font-mono), monospace;
+  }
+
+  ::selection {
+    background: rgba(56, 189, 248, 0.24);
+  }
+}
+
+@layer components {
+  .glass-panel {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.04));
+    backdrop-filter: blur(18px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .section-shell {
+    @apply relative overflow-hidden rounded-[28px] border border-white/10 bg-white/[0.03] shadow-premium;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+@media print {
+  body {
+    background: white !important;
+    color: black !important;
+  }
+
+  .no-print {
+    display: none !important;
+  }
+}
