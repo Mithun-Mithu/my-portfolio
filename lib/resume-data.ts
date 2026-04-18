@@ -6,7 +6,7 @@ export const resumeData = {
     title:
       "DBC’26 | Java | Python | Full stack | C++ | C | SQL | GitHub | Cyber Security | AI-ML Enthusiast",
     summary: "Exploring tech, creating impact..",
-    location: "Greater Bengaluru Area",
+    location: "Chitradurga 577501",
     email: "mithunmithu3041@gmail.com",
     phone: "",
     links: [
@@ -133,7 +133,7 @@ export const resumeData = {
     "Mithun M",
     "DBC’26 | Java | Python | Full stack | C++ | C | SQL | GitHub | Cyber",
     "Security | AI-ML Enthusiast | Exploring tech, creating impact..",
-    "Greater Bengaluru Area",
+    "Chitradurga 577501",
     "Education",
     "Davangere University, Davangere",
     "· (2024)",
